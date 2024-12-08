@@ -3,9 +3,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>배꼽파지 않도록 잘 개발해요</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>메인화면</h1>
+    <div class="w-[1200px] min-h-[800px] bg-white shadow-lg rounded-lg flex flex-col">
+        <header class="w-full bg-neutral-100 text-neutral-950 flex items-center justify-between py-6 px-8">
+          <h1 class="font-title text-2xl">포트폴리오</h1>
+          <nav class="flex gap-6">
+            <a href="#about" class="hover:underline">소개</a>
+            <a href="#projects" class="hover:underline">프로젝트</a>
+            <a href="#contact" class="hover:underline">연락처</a>
+          </nav>
+        </header>
+        <main class="flex-1 flex flex-col gap-12 p-8">
+          <section id="about" class="flex items-center gap-8">
+            <img 
+              src="./assets/devellybutton.png"
+              alt="profile"
+              class="w-[200px] h-[200px] rounded-full object-contain"
+            />
+            <div>
+              <h2 class="font-title text-xl mb-4">백엔드 개발자 이가린입니다.</h2>
+              <p class="text-neutral-950">
+                문제 해결을 통한 성장과 명확한 커뮤니케이션을 지향합니다.
+              </p>
+            </div>
+          </section>
+          <section id="projects">
+            <h2 class="font-title text-xl mb-4">프로젝트</h2>
+            <div class="grid grid-cols-3 gap-6">
+              <div class="bg-neutral-100 rounded-md p-4 flex flex-col items-start">
+                <img 
+                  src="./assets/caugannies.png"
+                  alt="중간이들"
+                  class="w-full h-[150px] object-cover rounded-md mb-4"
+                />
+                <h3 class="text-lg text-neutral-950 mb-2">중간이들</h3>
+                <p class="text-neutral-950">
+                  중앙대 간호학과 동문 커뮤니티
+                </p>
+              </div>
+              <div class="bg-neutral-100 rounded-md p-4 flex flex-col items-start">
+                <img 
+                  src="./assets/tripteller.png"
+                  alt="트립텔러"
+                  class="w-full h-[150px] object-cover rounded-md mb-4"
+                />
+                <h3 class="text-lg text-neutral-950 mb-2">트립텔러</h3>
+                <p class="text-neutral-950">
+                  여행 일정관리 및 기록 공유 커뮤니티
+                </p>
+              </div>
+              <div class="bg-neutral-100 rounded-md p-4 flex flex-col items-start">
+                <img 
+                  src="./assets/honeytouse.png"
+                  alt="꿀단집"
+                  class="w-full h-[150px] object-cover rounded-md mb-4"
+                />
+                <h3 class="text-lg text-neutral-950 mb-2">꿀단집</h3>
+                <p class="text-neutral-950">
+                    1인가구 자취용품 판매 쇼핑물
+                </p>
+              </div>
+            </div>
+          </section>
+          <section id="contact" class="bg-neutral-100 rounded-md p-6">
+            <h2 class="font-title text-xl mb-4">Contact Me</h2>
+            <form class="flex flex-col gap-4">
+              <input 
+                type="text" 
+                placeholder="이름" 
+                class="p-3 rounded-md border border-neutral-300"
+              />
+              <input 
+                type="email" 
+                placeholder="이메일" 
+                class="p-3 rounded-md border border-neutral-300"
+              />
+              <textarea 
+                placeholder="메시지"
+                class="p-3 rounded-md border border-neutral-300 h-[100px]"
+              ></textarea>
+              <button class="bg-primary-500 text-primary-50 px-6 py-3 rounded-md">
+                보내기
+              </button>
+            </form>
+          </section>
+        </main>
+        <footer class="w-full bg-neutral-200 text-center p-4 text-neutral-950">
+          © 2024 포트폴리오, All rights reserved.
+        </footer>
+      </div>
   </body>
 </html>
