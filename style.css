@@ -354,6 +354,14 @@ header.scrolled {
   animation: float 3s ease-in-out infinite;
 }
 
+.highlight-text {
+  color: #0077cc; 
+  font-size: 1.25em; 
+  font-weight: 600; 
+  display: block;
+  margin-bottom: 8px; 
+}
+
 @keyframes float {
   0% {
     transform: translateY(0);
