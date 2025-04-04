@@ -354,7 +354,7 @@ header.scrolled {
   animation: float 3s ease-in-out infinite;
 }
 
-.highlight-text {
+.hero-subtitle .highlight-text {
   color: #0077cc; 
   font-size: 1.25em; 
   font-weight: 600; 
