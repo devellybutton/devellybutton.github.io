@@ -96,6 +96,44 @@ topBtn.addEventListener("mouseout", () => {
   topBtn.style.transform = "translateY(0) scale(1)";
 });
 
+// 내 이름 애니메이션
+const myName = document.querySelector(".my-name");
+const originalText = myName.innerText;
+const animationDelay = 3000;
+
+function myNameAnimation() {
+  myName.innerHTML = originalText
+    .split("")
+    .map((ltr, idx) => {
+      return `<span class="ltr" style="--delay: ${idx * 100}ms">${ltr}</span>`;
+    })
+    .join("");
+
+  console.log(myName);
+
+  const ltrs = document.querySelectorAll(".my-name .ltr");
+  const lastLtrIdx = ltrs.length - 1;
+
+  // 마지막 글자의 애니메이션이 끝나면 타이머 시작
+  ltrs[lastLtrIdx].addEventListener("animationend", function onAnimationEnd() {
+    ltrs[lastLtrIdx].removeEventListener("animationend", onAnimationEnd);
+
+    ltrs.forEach((ltr) => ltr.classList.add("completed"));
+
+    setTimeout(() => {
+      myName.innerText = originalText;
+      setTimeout(myNameAnimation, 150);
+    }, animationDelay);
+  });
+}
+
+myNameAnimation();
+// ltrs.forEach((ltr) => {
+//   ltr.addEventListener("animationend", () => {
+//     ltr.classList.add("show");
+//   });
+// });
+
 // 포트폴리오 필터링
 filterBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
