@@ -1,0 +1,144 @@
+/* 기본 카드 */
+.card {
+  background-color: #fff;
+  border-radius: var(--border-radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-md);
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* 교육 카드 */
+.education-card {
+  background-color: #fff;
+  border-radius: var(--border-radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-md);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.education-card:hover {
+  transform: translateY(-12px);
+  box-shadow: var(--shadow-lg);
+}
+
+.education-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  transition: height 0.3s ease;
+}
+
+.education-card:hover::before {
+  height: 7px;
+}
+
+/* 경력 카드 */
+.career-card {
+  background-color: #fff;
+  border-radius: var(--border-radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-md);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  border-left: 5px solid;
+  border-image: linear-gradient(
+      to bottom,
+      var(--primary-color),
+      var(--accent-color)
+    )
+    1;
+  height: 100%;
+}
+
+.career-card:hover {
+  transform: translateY(-12px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* 자격증 및 수상 아이템 */
+.license-item,
+.award-item {
+  background-color: #fff;
+  border-radius: var(--border-radius-md);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  transition: all 0.4s ease;
+  position: relative;
+  border-left: 4px solid;
+  border-image: linear-gradient(
+      to bottom,
+      var(--primary-color),
+      var(--accent-color)
+    )
+    1;
+}
+
+.license-item:hover,
+.award-item:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* 연락처 아이템 */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* 아이콘 컨테이너 */
+.icon-container {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.1),
+    rgba(37, 99, 235, 0.15)
+  );
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  transition: all 0.4s ease;
+}
+
+.card:hover .icon-container,
+.education-card:hover .education-icon,
+.career-card:hover .career-icon {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: #fff;
+  transform: rotate(360deg) scale(1.1);
+  border-radius: 30px;
+}

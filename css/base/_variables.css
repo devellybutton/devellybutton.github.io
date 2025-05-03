@@ -1,0 +1,60 @@
+/* 변수 정의 */
+:root {
+  /* 색상 팔레트 */
+  --primary-color: #3b82f6;
+  --secondary-color: #60a5fa;
+  --accent-color: #ec4899;
+  --dark-color: #111827;
+  --light-color: #f9fafb;
+
+  /* 기능 색상 */
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+
+  /* 그레이 스케일 */
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+
+  /* 레이아웃 */
+  --max-width: 1200px;
+  --header-height: 70px;
+
+  /* 타이포그래피 */
+  --font-main: "Spoqa Han Sans Neo", "SUIT Variable", "Pretendard Variable",
+    "Noto Sans KR", -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic",
+    sans-serif;
+
+  /* 간격 */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+
+  /* 그림자 */
+  --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 25px 50px rgba(0, 0, 0, 0.1);
+
+  /* 테두리 */
+  --border-radius-sm: 0.5rem;
+  --border-radius-md: 1rem;
+  --border-radius-lg: 1.5rem;
+
+  /* 애니메이션 */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  --bezier-bounce: cubic-bezier(0.5, 0, 0.25, 1.25);
+  --bezier-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
