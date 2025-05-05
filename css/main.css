@@ -26,3 +26,42 @@
 
 /* 반응형 */
 @import url("./_responsive.css");
+
+.custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(var(--primary-color-rgb), 0.3);
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+  }
+  
+  .cursor-hover {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(var(--primary-color-rgb), 0.1);
+  }
+  
+  :root {
+    --primary-color-rgb: 66, 133, 244;
+  }
+  
+  html.cursor-effect-enabled {
+    cursor: none;
+  }
+  
+  html.cursor-effect-enabled a,
+  html.cursor-effect-enabled button,
+  html.cursor-effect-enabled .portfolio-item,
+  html.cursor-effect-enabled .skill {
+    cursor: none;
+  }
+  
+  @media (max-width: 768px) {
+    .custom-cursor {
+      display: none;
+    }
+  }
