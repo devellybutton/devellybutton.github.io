@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/devellybutton.github.io/",
+  base: "./",
   publicDir: "public",
 });
