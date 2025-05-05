@@ -13,8 +13,6 @@ import { applyAdditionalStyles } from "./features/styles.js";
 import { submitContactForm } from "./features/contact-form/contact-form.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("DOM fully loaded");
-
   // 추가 스타일 적용
   applyAdditionalStyles();
 

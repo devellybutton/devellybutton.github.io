@@ -1,4 +1,5 @@
 // 추가 CSS 스타일을 동적으로 적용
+// 페이지 첫 로딩시 한번만 투명&float 됨
 export function applyAdditionalStyles() {
   const styleElement = document.createElement("style");
   styleElement.textContent = `
