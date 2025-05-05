@@ -1,0 +1,103 @@
+.contact-form {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.contact-form:hover {
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+}
+
+.form-group {
+  margin-bottom: 1.8rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--gray-200);
+  border-radius: 0.8rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  background-color: var(--gray-50);
+  color: var(--dark-color);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  background-color: #fff;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+  color: var(--dark-color);
+  font-size: 1.05rem;
+}
+
+textarea.form-control {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* 폼 유효성 검사 스타일 */
+.form-control.is-valid {
+  border-color: var(--success-color);
+  background-color: rgba(16, 185, 129, 0.05);
+}
+
+.form-control.is-invalid {
+  border-color: var(--error-color);
+  background-color: rgba(239, 68, 68, 0.05);
+}
+
+.invalid-feedback {
+  display: none;
+  width: 100%;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--error-color);
+}
+
+.form-control.is-invalid + .invalid-feedback {
+  display: block;
+}
+
+/* 알림 메시지 스타일 */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px 25px;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.notification.success {
+  background-color: var(--success-color);
+}
+
+.notification.error {
+  background-color: var(--error-color);
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.notification i {
+  font-size: 1.5rem;
+}

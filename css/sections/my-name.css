@@ -1,0 +1,23 @@
+/* 히어로 안에 있는 "안녕하세요 이가린입니다" 이름 부분*/
+.my-name {
+  text-transform: uppercase;
+}
+
+.my-name .ltr {
+  display: inline-block;
+  transform: translateY(0.5em);
+  opacity: 0;
+  animation: fade-in 500ms ease-in-out var(--delay) forwards;
+}
+
+@keyframes fade-in {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.my-name .ltr.show {
+  transform: translateY(0);
+  opacity: 1;
+}

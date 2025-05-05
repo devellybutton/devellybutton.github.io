@@ -1,0 +1,106 @@
+/* 자격증 섹션 */
+.license {
+  background-color: var(--gray-50);
+  position: relative;
+  overflow: hidden;
+}
+
+.license::after {
+  content: "";
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    rgba(236, 72, 153, 0.03),
+    rgba(219, 39, 119, 0.05)
+  );
+  bottom: -25vw;
+  left: -25vw;
+}
+
+.license-awards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.license-category-title,
+.awards-category-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--dark-color);
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.license-category-title::after,
+.awards-category-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+.license-items,
+.awards-items {
+  display: grid;
+  gap: 1.8rem;
+}
+
+.license-item,
+.award-item {
+  background-color: #fff;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+  position: relative;
+  border-left: 4px solid;
+  border-image: linear-gradient(
+      to bottom,
+      var(--primary-color),
+      var(--accent-color)
+    )
+    1;
+}
+
+.license-item:hover,
+.award-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.license-title,
+.award-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: var(--dark-color);
+  line-height: 1.4;
+}
+
+.license-organization,
+.award-date {
+  font-size: 1rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.license-date,
+.award-desc {
+  font-size: 0.95rem;
+  color: var(--gray-500);
+  line-height: 1.6;
+}
