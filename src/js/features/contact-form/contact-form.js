@@ -2,11 +2,46 @@ import { showNotification } from "./notification.js";
 import { contactForm } from "../../base/dom-elements.js";
 import { supabase } from "../../base/supabase.js";
 
+// 3번 보낸 후 3분 제한
+const MAX_SUBMISSION_COUNT = 3; // 제한 횟수
+const PERIOD_TIME = 3 * 60 * 1000; // 3분
+let count = 0; // 현재 제한 횟수
+let lastSubmitionTime = 0; // 마지막 제출 시각
+
+function incrementCount() {
+  count++;
+  lastSubmitionTime = Date.now();
+}
+
 // 폼 제출 처리
 export function submitContactForm() {
   try {
     contactForm.addEventListener("submit", async (e) => {
       e.preventDefault();
+
+      if (
+        count >= MAX_SUBMISSION_COUNT &&
+        Date.now() - lastSubmitionTime < PERIOD_TIME
+      ) {
+        const remainMinutes = Math.ceil(
+          (PERIOD_TIME - (Date.now() - lastSubmitionTime)) / (60 * 1000)
+        );
+        showNotification(
+          `너무 많은 요청이 있었습니다. ${remainMinutes}분 후에 다시 시도해주세요.`,
+          "error"
+        );
+
+        return;
+      }
+
+      // 제한 시간 지나면 count 초기화
+      if (Date.now() - lastSubmitionTime > PERIOD_TIME) {
+        count = 0;
+      }
+
+      if (import.meta.env.DEV) {
+        console.log("현재 제출 횟수:", count);
+      }
 
       // 폼 데이터 가져오기
       const name = document.getElementById("name").value;
@@ -44,8 +79,8 @@ export function submitContactForm() {
         "success"
       );
 
-      // 폼 초기화
-      contactForm.reset();
+      // 제출 횟수 증가, 마지막 제출 시각 기록
+      incrementCount();
     });
   } catch (error) {
     console.error("연락하기 데이터 전송 중 에러 발생", error);

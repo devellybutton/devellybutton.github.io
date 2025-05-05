@@ -17,7 +17,7 @@
   </tr>
 </table>
 
-![Portfolio Preview](public/assets/portfolio-main.webp)
+[![Portfolio Preview](public/assets/portfolio-main.webp)](https://devellybutton.github.io/)
 
 > 개인 브랜딩을 위한 반응형 포트폴리오 사이트입니다. <br>
 > 모듈화된 구조로 유지보수가 용이하며, `Supabase`를 활용한 백엔드 연동도 포함되어 있습니다.
@@ -58,7 +58,7 @@
 | 파비콘 추가                                             | ✅        |
 | 이미지 확장자 webp로 변경                               | ✅        |
 | 유지보수를 위한 프로젝트 소스 분리                      | ✅        |
-| 폼 액션 속성 서버와 연동해서 전송 처리 (superbase 연동) | ❌        |
+| 폼 서버와 연동해서 전송 처리 (superbase 연동) | ✅        |
 
 <br>
 
