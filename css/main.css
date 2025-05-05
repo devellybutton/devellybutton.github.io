@@ -1,67 +1,30 @@
-/* Base */
-@import url("./base/_variables.css");
-@import url("./base/_reset.css");
-@import url("./base/_typography.css");
+/* 공통, 변수, 폰트 */
+@import url("./base/variables.css");
+@import url("./base/reset.css");
+@import url("./base/typography.css");
 
-/* Layout */
-@import url("./layout/_grid.css");
-@import url("./layout/_header.css");
-@import url("./layout/_footer.css");
+/* 레이아웃 */
+@import url("./layout/header.css");
+@import url("./layout/footer.css");
 
-/* Components */
-@import url("./components/_buttons.css");
-@import url("./components/_top-button.css");
-@import url("./components/_cards.css");
-@import url("./components/_forms.css");
+/* 컴포넌트 */
+@import url("./components/buttons.css");
+@import url("./components/top-button.css");
+@import url("./components/cards.css");
+@import url("./components/forms.css");
 
-/* Sections */
-@import url("./sections/_hero.css");
-@import url("./sections/_about.css");
-@import url("./sections/_portfolio.css");
-@import url("./sections/_education.css");
-@import url("./sections/_career.css");
-@import url("./sections/_license.css");
-@import url("./sections/_contact.css");
-@import url("./sections/_my-name.css");
+/* 섹션 */
+@import url("./sections/hero.css");
+@import url("./sections/about.css");
+@import url("./sections/portfolio.css");
+@import url("./sections/education.css");
+@import url("./sections/career.css");
+@import url("./sections/license.css");
+@import url("./sections/contact.css");
+@import url("./sections/my-name.css");
 
 /* 반응형 */
-@import url("./_responsive.css");
+@import url("./responsive/responsive.css");
 
-.custom-cursor {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: rgba(var(--primary-color-rgb), 0.3);
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: width 0.2s, height 0.2s, background-color 0.2s;
-  }
-  
-  .cursor-hover {
-    width: 50px;
-    height: 50px;
-    background-color: rgba(var(--primary-color-rgb), 0.1);
-  }
-  
-  :root {
-    --primary-color-rgb: 66, 133, 244;
-  }
-  
-  html.cursor-effect-enabled {
-    cursor: none;
-  }
-  
-  html.cursor-effect-enabled a,
-  html.cursor-effect-enabled button,
-  html.cursor-effect-enabled .portfolio-item,
-  html.cursor-effect-enabled .skill {
-    cursor: none;
-  }
-  
-  @media (max-width: 768px) {
-    .custom-cursor {
-      display: none;
-    }
-  }
+/* 커서 효과 */
+@import url("./cursor/cursor.css");
