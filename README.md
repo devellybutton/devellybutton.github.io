@@ -33,9 +33,7 @@
 - ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
   ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
   ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-- ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white) (백엔드 서비스)
-- ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222?style=for-the-badge&logo=github&logoColor=white) (호스팅)
-- ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white) (CI/CD)
+- ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
 <br>
 
@@ -43,24 +41,23 @@
 
 - 반응형 디자인 (모바일, 태블릿, 데스크톱 지원)
 - 모듈화된 코드 구조로 유지보수성 개선
-- Supabase 연동 연락 폼 (실제 데이터 전송)
 
 <br>
 
 ## 🗂️ 프로젝트 로드맵
 
-| 할 일                                              | 완료 여부 |
-| -------------------------------------------------- | --------- |
-| 각 프로젝트를 해당 GitHub 소스 코드 링크와 연동    | ✅        |
-| "맨 위로 가기" 버튼 추가                           | ✅        |
-| "연락하기" 섹션에 "중간이들 개발자 구인" 공지 추가 | ✅        |
-| 마우스 포인터 디자인 변경 및 hover 효과            | ✅        |
-| 프로필 이미지 및 소개 이미지 추가                  | ✅        |
-| '안녕하세요 OOO입니다.' 글자 애니메이션 추가       | ✅        |
-| 파비콘 추가                                        | ✅        |
-| 이미지 확장자 webp로 변경                          | ✅        |
-| 유지보수를 위한 프로젝트 소스 분리                 | ✅        |
-| 폼 서버와 연동해서 전송 처리 (superbase 연동)      | ✅        |
+| 할 일                                                                                  | 완료 여부 |
+| -------------------------------------------------------------------------------------- | --------- |
+| 각 프로젝트를 해당 GitHub 소스 코드 링크와 연동                                        | ✅        |
+| "맨 위로 가기" 버튼 추가                                                               | ✅        |
+| "연락하기" 섹션에 "중간이들 개발자 구인" 공지 추가                                     | ✅        |
+| 마우스 포인터 디자인 변경 및 hover 효과                                                | ✅        |
+| 프로필 이미지 및 소개 이미지 추가                                                      | ✅        |
+| '안녕하세요 OOO입니다.' 글자 애니메이션 추가                                           | ✅        |
+| 파비콘 추가 `                                                                          | ✅        |
+| 이미지 확장자 webp로 변경                                                              | ✅        |
+| 유지보수를 위한 프로젝트 소스 분리                                                     | ✅        |
+| 폼 서버와 연동해서 전송 처리 (superbase 연동) <br> → 브라우저 키 노출 문제로 일단 보류 | ✅        |
 
 <br>
 
