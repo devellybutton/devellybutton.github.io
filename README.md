@@ -17,7 +17,7 @@
   </tr>
 </table>
 
-<a href="https://devellybutton.github.io/" target="_blank">
+<a href="https://devellybutton.vercel.app/" target="_blank">
   <img src="public/assets/portfolio-main.webp" alt="Portfolio Preview" />
 </a>
 
