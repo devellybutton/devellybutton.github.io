@@ -19,16 +19,23 @@ jobs:
           node-version: "22"
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build vite project
         run: npm run build
         env:
           VITE_SUPABASE_API_URL: ${{ secrets.VITE_SUPABASE_API_URL }}
           VITE_SUPABASE_API_KEY: ${{ secrets.VITE_SUPABASE_API_KEY }}
+      
+      - name: Move build files to root
+        run: |
+          cp -r dist/* .
+          rm -rf dist
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+      # 변경사항 없으면 커밋 실패할 수 있음
+      # 커밋 실패할 경우 "No changes" 남기고 넘어감
+      - name: Commit & push to master
+        run: |
+          git add .
+          git commit -m "Deploy to foot" || echo "No changes"
+          git push 
