@@ -3,7 +3,7 @@ import { defineConfig } from "vite";
 export default defineConfig({
   base: "/devellybutton.github.io/",
   build: {
-    outDir: "..",
+    outDir: "dist", // 빌드된 파일이 저장될 디렉토리
     minify: "terser",
     terserOptions: {
       compress: {
@@ -12,4 +12,5 @@ export default defineConfig({
       },
     },
   },
+  publicDir: "public", // 정적 파일
 });
