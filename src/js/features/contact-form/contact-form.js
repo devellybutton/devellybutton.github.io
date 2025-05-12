@@ -1,6 +1,6 @@
 import { showNotification } from "./notification.js";
 import { contactForm } from "../../base/dom-elements.js";
-import { supabase } from "../../base/supabase.js";
+// import { supabase } from "../../base/supabase.js";
 
 // 3번 보낸 후 3분 제한
 const MAX_SUBMISSION_COUNT = 3; // 제한 횟수
@@ -63,15 +63,15 @@ export function submitContactForm() {
       }
 
       // Supabase에 데이터 삽입
-      const { data, error } = await supabase
-        .from("contact_messages")
-        .insert([{ name, email, subject, message }]);
+      // const { data, error } = await supabase
+      //   .from("contact_messages")
+      //   .insert([{ name, email, subject, message }]);
 
-      if (error) {
-        console.error("Supabase 전송 중 오류:", error);
-        showNotification("메시지 전송 중 오류가 발생했습니다.", "error");
-        return;
-      }
+      // if (error) {
+      //   console.error("Supabase 전송 중 오류:", error);
+      //   showNotification("메시지 전송 중 오류가 발생했습니다.", "error");
+      //   return;
+      // }
 
       // 성공 메시지 표시
       showNotification(
