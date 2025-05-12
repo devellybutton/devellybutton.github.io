@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/devellybutton.github.io/",
+  base: "/",
   build: {
     outDir: "dist", // 빌드된 파일이 저장될 디렉토리
     minify: "terser",
